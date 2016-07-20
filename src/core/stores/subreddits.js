@@ -12,6 +12,9 @@ module.exports = Reflux.createStore({
   init: function() {
     this.listenTo(SubredditsAction.requestPopularSubreddits, this.getPopularSubreddits);
     this.listenTo(SubredditsAction.storeSubreddits, this.setSubreddits);
+
+    // Add
+    this.listenTo(SubredditsAction.setCurrentName, this.setCurrentName);
   },
 
   getInitialState: function() {
@@ -25,5 +28,11 @@ module.exports = Reflux.createStore({
   setSubreddits: function(subreddits) {
     this.data.subreddits = subreddits;
     this.trigger(this.data);
-  }
+  },
+
+  // Add key/val pair
+  setCurrentName: function (name) {
+    this.data.currentName = name;
+    this.trigger(this.data);
+  },
 });

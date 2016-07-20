@@ -4,5 +4,6 @@ const Reflux = require('reflux');
 
 module.exports = Reflux.createActions([
   'requestPopularSubreddits',
-  'storeSubreddits'
+  'storeSubreddits',
+  'setCurrentName',
 ]);
