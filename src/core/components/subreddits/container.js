@@ -7,11 +7,11 @@ module.exports = React.createClass({
   displayName: 'Subreddits Container',
 
   propTypes: {
-    subreddits: React.PropTypes.array.isRequired
+    subreddits: React.PropTypes.array.isRequired,
   },
 
-  renderSubreddits: function(subreddits) {
-    return subreddits.map(function(item) {
+  renderSubreddits: function (subreddits) {
+    return subreddits.map(function (item) {
       return (
         <Subreddit
           key={item.data.id}
@@ -21,8 +21,8 @@ module.exports = React.createClass({
     });
   },
 
-  render: function() {
-    return(
+  render: function () {
+    return (
       <div className="navigation">
         <div className="header">Navigation</div>
         <ul>
@@ -30,5 +30,5 @@ module.exports = React.createClass({
         </ul>
       </div>
     );
-  }
+  },
 });

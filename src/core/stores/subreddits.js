@@ -33,6 +33,8 @@ module.exports = Reflux.createStore({
   // Add key/val pair
   setCurrentName: function (name) {
     this.data.currentName = name;
+    document.title = name + ' - ' + document.title;
     this.trigger(this.data);
   },
+
 });
